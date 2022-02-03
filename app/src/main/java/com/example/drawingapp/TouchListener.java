@@ -16,7 +16,22 @@ public class TouchListener implements View.OnTouchListener {
         DrawingView drawingView = (DrawingView) view;
         Path path;
 
-        return false;
+        switch (event.getAction() & MotionEvent.ACTION_MASK) {
+
+            case MotionEvent.ACTION_DOWN:
+                path = new Path();
+                path.moveTo(x, y);
+                drawingView.addPath(path);
+                break;
+            case MotionEvent.ACTION_MOVE:
+                path = drawingView.getLastPath();
+                if (path != null) path.lineTo(x, y);
+                break;
+        }
+
+        drawingView.invalidate();
+
+        return true;
 
     }
 

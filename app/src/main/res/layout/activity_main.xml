@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="#D6D6D6"
     tools:context=".MainActivity">
-    <View
+    <com.example.drawingapp.DrawingView
         android:id="@+id/canvas"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@id/colorPicker"
-        android:background="#FFFFFF"/>
+        android:background="#FFFFFF" />
     <LinearLayout
         android:id="@+id/colorPicker"
         android:layout_width="0dp"
