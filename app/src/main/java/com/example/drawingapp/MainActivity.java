@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void setColor(View view) {
         ColorDrawable buttonColor = (ColorDrawable) view.getBackground();
-        System.out.println("change color");
+        drawingView.setCurrentColor(buttonColor.getColor());
     }
 
 

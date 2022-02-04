@@ -15,7 +15,9 @@ import java.util.ArrayList;
 
 public class DrawingView extends View {
 
-    private ArrayList<Path> paths = new ArrayList<>();
+    private final ArrayList<Path> paths = new ArrayList<>();
+    private final ArrayList<Integer> colors = new ArrayList<>();
+    private int currentColor = 0xFF000000;
 
     public DrawingView(Context context) {
         super(context);
@@ -27,6 +29,7 @@ public class DrawingView extends View {
 
     public void addPath(Path path) {
         paths.add(path);
+        colors.add(currentColor);
     }
 
     public Path getLastPath() {
@@ -40,16 +43,20 @@ public class DrawingView extends View {
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
 
+        int i = 0;
         for (Path path : paths) {
             Paint paint = new Paint();
-            paint.setColor(0xFFEE19AA);
+            paint.setColor(colors.get(i));
             paint.setStyle(Paint.Style.STROKE);
             paint.setStrokeWidth(3f);
             canvas.drawPath(path, paint);
+            i++;
         }
 
     }
 
-
+    public void setCurrentColor(int color) {
+        currentColor = color;
+    }
 
 }
