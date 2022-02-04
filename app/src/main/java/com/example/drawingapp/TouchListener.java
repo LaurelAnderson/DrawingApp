@@ -27,6 +27,7 @@ public class TouchListener implements View.OnTouchListener {
                 path = drawingView.getLastPath();
                 if (path != null) path.lineTo(x, y);
                 break;
+
         }
 
         drawingView.invalidate();

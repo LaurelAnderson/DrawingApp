@@ -2,7 +2,9 @@ package com.example.drawingapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
+import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,4 +19,11 @@ public class MainActivity extends AppCompatActivity {
         drawingView.setOnTouchListener(new TouchListener());
 
     }
+
+    public void setColor(View view) {
+        ColorDrawable buttonColor = (ColorDrawable) view.getBackground();
+        System.out.println("change color");
+    }
+
+
 }

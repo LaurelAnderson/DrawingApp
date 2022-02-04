@@ -39,35 +39,40 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_margin="1dp"
-            android:background="#EE19AA"/>
+            android:background="#EE19AA"
+            android:onClick="setColor"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="#ABEE1B" />
+            android:background="#ABEE1B"
+            android:onClick="setColor"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:layout_margin="1dp"
-            android:background="#1BABEE"/>
+            android:background="#1BABEE"
+            android:onClick="setColor"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="#7D00FB" />
+            android:background="#7D00FB"
+            android:onClick="setColor"/>
 
         <View
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_margin="1dp"
             android:layout_weight="1"
-            android:background="#000000" />
+            android:background="#000000"
+            android:onClick="setColor"/>
 
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
